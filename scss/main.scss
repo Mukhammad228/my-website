@@ -1,0 +1,162 @@
+@import 'config';
+@import 'utilities';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Gowun Dodum', sans-serif;
+    line-height: 1.6;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+h1,h2,h3,h4{
+    text-transform: uppercase;
+    color: #424141;
+}
+
+img{
+    width: 100%;
+}
+
+// header
+
+#header{
+    &-home{
+        .container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 1rem;
+        
+            .item{
+                position: relative;
+
+                a{
+                    position: absolute;
+                    z-index: 5;
+                    top: 45%;
+                    left: 40%;
+                    color: #fff;
+                    opacity: 0.8;
+                    font-weight: bold;
+                    background: transparent;
+                }
+
+                i{
+                    position: absolute;
+                    z-index: 5;
+                    top: 48%;
+                    left: 35%;
+                    color: #fff;
+                    opacity: 0.9;
+                }
+
+                img{
+                    box-shadow: 1px 1px 5px 1px #333;
+
+                    &:hover{
+                        background: #fff;
+                        opacity: 0.7;
+                        transition: all .2s;
+                    }
+            }
+            }
+        }
+    }
+    &-about{
+        .container{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            padding: .5rem .5rem;
+            font-weight: normal;
+
+            .about-me{
+                padding-left: 2rem;
+
+                h2{
+                    padding-top: 1rem;
+                    text-transform: uppercase;
+                    font-weight: normal;
+                }
+                p{
+                    line-height: 2;
+                }
+            }
+        }
+    }
+    &-contact{
+        .container{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            form{
+                display: flex;
+                flex-direction: column;
+                grid-gap: .5rem;
+
+                textarea{
+                    width: 60%;
+                    padding: .3rem 1rem;
+
+                    &:hover{
+                        border-color: #333;
+                        transition: all 5s;
+                    }
+
+                    &::placeholder{
+                        color: #333;
+                    }
+                }
+
+                button{
+                    border: none;
+                    width: 60%;
+                    padding: .5rem 1rem;
+                }
+            }
+        }
+        h2{
+            font-weight: normal;
+        }
+
+    }
+}
+
+#navbar{
+    padding-top: 1.5rem;
+
+    .container{
+        ul{
+            display: flex;
+            justify-content: center;
+
+            li{
+                a{
+                    text-transform: uppercase;
+                    padding: .1rem 1rem;
+                    font-weight: bold;
+                    color: #686161;
+
+                    &:hover{
+                        color: #ffffff93;
+                        transition: all .2s;
+                    }
+
+                    &.current{
+                        color: #f4f4f4;
+                    }
+                }
+            }
+        }
+    }
+}

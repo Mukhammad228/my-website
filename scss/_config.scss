@@ -1,0 +1,18 @@
+// Variables
+
+$website-width: 1000px;
+$main-color: #5d5dfae0;
+$secondary-color: #ffa500;
+$primary-color: #e70000;
+$light-color: #fff;
+$medium-color: #ccc;
+$dark-color: #333;
+
+@function set-text-color($color){
+    @if(lightness($color) > 50){
+        @return #000;
+    }
+    @else{
+        @return #fff;
+    }
+}

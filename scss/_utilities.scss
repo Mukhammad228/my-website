@@ -1,0 +1,107 @@
+.container{
+    max-width: $website-width;
+    padding: .5rem 1.5rem;
+    margin: auto;
+    overflow: hidden;
+    background: $light-color;
+}
+
+.bg{
+    &-main{
+        color: #333;
+        background: $main-color;
+    }
+
+    &-light{
+        color: #333;
+        background: $light-color;
+    }
+
+    &-dark{
+        color: #f4f4f4;
+        background: $dark-color;
+    }
+}
+
+.btn{
+    &:hover{
+        background: #333;
+        opacity: 0.8;
+        transition: all .5s;
+        cursor: pointer;
+    }
+    &-sub{
+        text-transform: uppercase;
+        border: none;
+        padding: .9rem 1.2rem;
+    }
+    &-dark{
+        color: #fff;
+        background: $dark-color;
+    }
+}
+
+button[class^='btn-']:hover,
+a[class^='btn-']:hover,
+input[class^='btn-']:hover{
+    background: $main-color;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.lead{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+// Padding
+
+.py{
+    &-1{
+        padding: 1rem 0;
+    }
+
+    &-2{
+        padding: 2rem 0;
+    }
+
+    &-3{
+        padding: 3rem 0;
+    }
+
+    &-4{
+        padding: 4rem 0;
+    }
+
+    &-input{
+        padding: .3rem 0 5rem 1rem;
+        width: 60%;
+        &:hover{
+            border-color: #333;
+            transition: all 5s;
+        }
+
+         &::placeholder{
+            color: #333;
+        }
+    }
+    &-in{
+        width: 60%;
+        padding: .3rem 1rem;
+        
+        &:hover{
+            border-color: #333;
+            transition: all 5s;
+        }
+        &::placeholder{
+            color: #333;
+        }
+    }
+}
+
+.m-10{
+    margin-top: 10rem;
+}
